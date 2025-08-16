@@ -1,0 +1,82 @@
+import everything
+
+public class ShowPoly extends Application{
+    private IntegerProperty sides;
+    public start(Stage){
+        // Create the base formatting
+        rootPane = new BorderPane;
+        scene = new Scene(rootPane. . .);
+        myPoly = new RegularPolylgonPane;
+        set the center of rootPane as myPoly;
+
+        // format the bottom pane
+        lowerPane = new HBox;
+        lowerPane.spacing = some_int;
+
+        // Create and format the buttons
+        up = new Button;
+        down = new Button;
+        format the Button up and Button down with Insets, and Font;
+
+        // Create a label to display active number of sides
+        num = new Label;
+        format Label num;
+
+        // Assign Button up, Button down, and Label num to HBox lowerPane;
+        format lowerPane with Insets and alignment settings;
+        get lowerPane children list -> add down, num, and up to it
+
+        // Finish formatting stage & display it
+        stage.setTitle("Some title example");
+        stage.setScene(scene);
+        stage.show();
+
+        // FUNCTION for up button:
+            n++;
+
+        // FUNCTION for down button
+            if n > 3 {
+            n--;
+            } else {
+            ALERT "Polygon cannot have less than 3 sides"
+            }
+        }
+    class RegularPolygonPane extends Pane;
+        private void paint(){
+            poly = new Polygon;
+            format polygon color, and size;
+            list = new ObservableList  // this is going to hold all of the x/y value pairs for the points on the polygon;
+            number = integerProperty;
+            bind number to n;
+
+            // set the center point for the polygon.
+            centerX = width / 2;
+            centerY = height / 2;
+            radius = 40% of the smaller of the two;
+
+            // Create coordinate points fo rthe polygon;
+             add x to the list (use cos to find the appropriate x coord for even placement of points on the circle;
+             add y to the list (use sin to do the same as the x);
+
+             delete the old polygon (if any) from the parent Pane,
+             add the new polygon to the pane.
+
+        }
+
+        public setWidth(width) {
+            set width of super to width;
+            call paint();
+        }
+
+        public setHeight(height) {
+            set height of super;
+            call paint();
+        }
+
+    }
+
+    // required main function for javafx to run;
+    public static void main(String[] args){
+        launch(args);
+    }
+}
